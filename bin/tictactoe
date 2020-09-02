@@ -7,6 +7,8 @@ require_relative '../config/environment'
 
  puts "WELCOME TO HELL; HU HU HU HU HAAAAA (This was a greeting message for Tic-Tac-Toe, brought to you by 'ya boi'"
  
+ 
+ 
  def begin
 puts "How many players?"
 input = gets.strip
@@ -28,20 +30,25 @@ Game.new(Player::Computer.new("X"), Player::Computer.new("O"), Board.new, true).
 puts "play again?"
 loop
 else
-puts "That is an invalid entry"
+puts "invalid"
 begin
 end
 end
+
+
+
 def loop
 puts "y or n?"
 answer = gets.strip
-case answer
-when "y"
+if answer == "y"
 begin
-when "n"
+
+elsif answer == "n"
 puts "see ya"
+
+end
 else
 loop
-end
+
 end
 begin
